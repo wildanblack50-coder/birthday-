@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Birthday - Salsabila Azkiya</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- Pustaka untuk efek confetti -->
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    </head>
+    <body>
+        <div id="tsparticles"></div>
+        <div id="shooting-stars"></div>
+
+        <audio id="bgMusic" loop>
+            <source src="love.mp3" type="audio/mpeg" />
+        </audio>
+
+        <!-- HERO SECTION -->
+        <section class="hero active">
+            <h3>Happy Birthday 🎉</h3>
+            <h1>Salsabila Azkiya</h1>
+            <p>Every star in the sky reminds me of you.</p>
+            <button id="openGift">Open Your Gift 🎁</button>
+        </section>
+
+        <!-- BIRTHDAY SECTION -->
+        <section id="birthday">
+            <h1>Happy Birthday &lt;3</h1>
+            <h2>Foto orang yang lagi ultah nih</h2>
+
+            <div class="birthday-card-wrapper">
+                <div class="memory-card">
+                    <img src="foto6.jpg" alt="Birthday Photo" />
+                    <p>The birthday girl herself ✨</p>
+                </div>
+            </div>
+
+            <button id="toLetter">Continue 💌</button>
+        </section>
+
+        <!-- LETTER SECTION -->
+        <section id="letter">
+            <h1>💌</h1>
+            <h2>Happy Birthday &lt;3</h2>
+            <p>
+                Selamat Ulang Tahun Sasaaa. Well sebagai awalan, aku
+                berterimakasih karena kamu telah menemaniku selama setahun,
+                there is a lot of thing i want to tell you, so keep moving!.
+                :&lt;.
+            </p>
+            <button id="toSpecial">Continue 🌹</button>
+        </section>
+
+        <!-- SPECIAL SECTION -->
+        <section id="special">
+            <h1>🌹 Why You Are Special</h1>
+            <p class="special-intro">
+                There are so many little things about you that make you special
+                to me.
+            </p>
+            <div class="special-list">
+                <div class="special-item">
+                    <h2>✨ Your Smile</h2>
+                    <p>
+                        Senyum mu menembus lubuk hatiku yang terdalam.
+                        Menghamparkanku kerinduan yang amat dalam.
+                    </p>
+                </div>
+                <div class="special-item">
+                    <h2>🌙 Your Presence</h2>
+                    <p>
+                        Kehadiranmu membuat semua tempat yang kita kunjungi
+                        menjadi tempat favoritku.
+                    </p>
+                </div>
+                <div class="special-item">
+                    <h2>💖 Simply You</h2>
+                    <p>
+                        Banyak hal spesial berasal dari dirimu, seakan dirimu
+                        sendiri sudah mendefinisikan arti spesial.
+                    </p>
+                </div>
+            </div>
+            <button id="toMemory">Continue 📸</button>
+        </section>
+
+        <!-- MEMORY SECTION -->
+        <section id="memory">
+            <h1>📸 Our Memories</h1>
+            <p class="memory-intro">
+                Some little moments that I want to remember.
+            </p>
+            <div class="memory-gallery">
+                <div class="memory-card">
+                    <img src="foto4.jpg" alt="Memory 1" />
+                    <p>One of the moments I will always remember.</p>
+                </div>
+                <div class="memory-card">
+                    <img src="foto2.jpg" alt="Memory 2" />
+                    <p>A simple moment, but a meaningful one.</p>
+                </div>
+                <div class="memory-card">
+                    <img src="foto3.jpg" alt="Memory 3" />
+                    <p>Another little piece of our story.</p>
+                </div>
+            </div>
+            <button id="toMap">Continue 🔐</button>
+        </section>
+
+        <!-- SECRET VAULT SECTION -->
+        <section id="treasure-map">
+            <h1>🔐 Secret Vault</h1>
+            <p class="map-intro">
+                Sebuah kotak rahasia khusus untukmu. Masukkan tanggal spesialmu
+                (DDMM) untuk membukanya!
+            </p>
+
+            <div class="vault-container">
+                <div id="vaultLocked" class="vault-box">
+                    <p class="vault-icon">🔒</p>
+                    <input
+                        type="password"
+                        id="vaultCode"
+                        placeholder="Masukkan Tanggal"
+                        maxlength="4"
+                    />
+                    <button id="unlockVault">Buka Kotak 🗝️</button>
+                    <p id="vaultError" class="vault-error"></p>
+                </div>
+
+                <div id="vaultUnlocked" class="vault-box hidden">
+                    <h2 class="vault-title-open">Yey, Terbuka! 🎉</h2>
+                    <div class="vault-text-box">
+                        <p class="vault-long-message">
+                            Happy Birthday sekali lagi, Salsabila! 💖<br /><br />
+                            Terima kasih banyak ya sudah bertahan sampai sejauh
+                            ini, melewati hari-hari baik maupun hari yang berat
+                            bersama-sama. Aku sangat bersyukur bisa mengenal dan
+                            ada di dalam bagian hidupmu.<br /><br />
+                            Untuk hadiah, bukan cuman ucapan ini kok, karena
+                            keuangan gwa agak dibatasi sekarang aku bakal pake
+                            sistem genshin, anniv nya kapan hadiahnya kapan ;v.
+                            Aku bakal ngasih 3 hadiah secara berkala 2 bulan
+                            ini.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="toClosing" class="hidden">
+                Continue to Closing 🌌
+            </button>
+        </section>
+
+        <!-- CLOSING SECTION -->
+        <section id="closing">
+            <h1>🌌</h1>
+            <h2>And this is not the end...</h2>
+
+            <!-- Bingkai Foto Tambahan di Bagian Closing -->
+            <div class="birthday-card-wrapper" style="margin-bottom: 15px">
+                <div class="memory-card" style="transform: rotate(2deg)">
+                    <img src="foto5.jpg" alt="Closing Photo" />
+                    <p>❤️</p>
+                </div>
+            </div>
+
+            <p>Thank you for being part of my Life.</p>
+            <p>Happy Birthday, Salsabila. ❤️</p>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
